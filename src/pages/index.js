@@ -50,7 +50,11 @@ export default function Home() {
           Roberto Castillo Portafolio
         </h1>
         <span className="text-gray-400">5 de febrero de 2022</span>
-
+        <div className="bg-white p-2 shadow-lg rounded-md my-2">
+          <h2 className="text-3xl text-blue-500 my-10 bg-white">
+            Frameworks de javacript
+          </h2>
+        </div>
         <div className="bg-white p-2 shadow-lg rounded-md">
           <header className="my-2 flex items-center justify-between">
             <h2 className="text-3xl text-blue-500 my-10 bg-white">Proyectos</h2>
