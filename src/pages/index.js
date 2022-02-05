@@ -42,15 +42,16 @@ export default function Home() {
         <meta name="description" content="portafolio personal" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className="shadow-md p-2 text-right sticky top-0">
+      <nav className="shadow-md p-2 text-right sticky top-0 bg-white">
         <h1 className="text-5xl text-blue-500 text-center">
           Roberto Castillo Portafolio
         </h1>
         <span className="text-gray-400">2/5/2022</span>
       </nav>
-      <main className="p-4">
+      <main className="p-4 ">
         <span className="text-5xl">Bienvenido</span>
-        <h2 className="text-3xl text-blue-500 my-10">Proyectos</h2>
+
+        <h2 className="text-3xl text-blue-500 my-10 bg-white">Proyectos</h2>
 
         <div
           className="grid gap-5 place-items-center"
@@ -59,7 +60,7 @@ export default function Home() {
           {proyects.map((p) => (
             <article
               key={p.link}
-              className="border-[1px] border-gray-400 hover:border-blue-500 group border-solid rounded-md p-2 w-96 hover:shadow-md h-36 flex flex-col justify-around"
+              className="border-[1px] bg-white border-gray-400 hover:border-blue-500 group border-solid rounded-md p-2 w-96 hover:shadow-md h-36 flex flex-col justify-around"
             >
               <a
                 href={p.link}
