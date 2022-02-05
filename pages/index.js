@@ -1,17 +1,26 @@
 import Head from "next/head";
 import { useState } from "react";
+import Card from "../components/card";
 import Chip from "../components/chip";
+import Grid from "../components/grid";
+import H2t from "../components/h2t";
 
 export default function Home() {
   const [frameworks, setFrameworks] = useState([
     {
       name: "Next.js",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/1920px-Nextjs-logo.svg.png",
     },
     {
       name: "Reactjs",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1024px-React.svg.png",
     },
     {
       name: "Vuejs",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png",
     },
   ]);
   const [proyects] = useState([
@@ -56,19 +65,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="p-4 ">
-        <span className="text-9xl text-center block">Bienvenido</span>
-        <h1 className="text-5xl bg-white text-blue-500 text-center">
-          Roberto Castillo Portafolio
-        </h1>
-        <span className="text-gray-400">5 de febrero de 2022</span>
-        <div className="bg-white p-2 shadow-lg rounded-md my-2">
-          <h2 className="text-3xl text-blue-500 my-10 bg-white">
-            Frameworks de javacript
-          </h2>
+        <div className="flex flex-col items-center">
+          <span className="text-9xl text-center bg-white">Bienvenido</span>
+          <h1 className="text-5xl bg-white text-blue-500 text-center">
+            Roberto Castillo Portafolio
+          </h1>
         </div>
+
+        <span className="text-gray-400">5 de febrero de 2022</span>
+
+        <div className="bg-white p-2 shadow-lg rounded-md my-10">
+          <H2t>Frameworks de javascript</H2t>
+          <Grid>
+            {frameworks.map((f) => (
+              <Card key={f.name} title={f.name} image={f.image}></Card>
+            ))}
+          </Grid>
+        </div>
+
         <div className="bg-white p-2 shadow-lg rounded-md">
           <header className="my-2 flex items-center justify-between">
-            <h2 className="text-3xl text-blue-500 my-10 bg-white">Proyectos</h2>
+            <H2t>Proyectos</H2t>
+
             {category && (
               <div className="flex items-center justify-end w-1/4">
                 <Chip onClick={() => setCategory("")}>Todos</Chip>
@@ -76,25 +94,11 @@ export default function Home() {
             )}
           </header>
 
-          <div
-            className="grid gap-5 place-items-center"
-            style={{
-              gridTemplateColumns: "repeat(auto-fit,minmax(384px,1fr))",
-            }}
-          >
+          <Grid>
             {proyects.map(
               (p) =>
                 p.category.includes(category) && (
-                  <article
-                    key={p.link}
-                    className="border-[1px] bg-white border-gray-400 hover:border-blue-500 group border-solid rounded-md p-2 w-96 hover:shadow-md h-36 flex flex-col justify-around"
-                  >
-                    <a
-                      href={p.link}
-                      className="text-2xl text-gray-600 group-hover:text-blue-500"
-                    >
-                      {p.title}
-                    </a>
+                  <Card key={p.link} title={p.title} link={p.link}>
                     <Chip
                       selected={category == p.category}
                       onClick={() => {
@@ -106,10 +110,10 @@ export default function Home() {
                     >
                       {p.category}
                     </Chip>
-                  </article>
+                  </Card>
                 )
             )}
-          </div>
+          </Grid>
         </div>
       </main>
 
