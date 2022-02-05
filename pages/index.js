@@ -3,6 +3,17 @@ import { useState } from "react";
 import Chip from "../components/chip";
 
 export default function Home() {
+  const [frameworks, setFrameworks] = useState([
+    {
+      name: "Next.js",
+    },
+    {
+      name: "Reactjs",
+    },
+    {
+      name: "Vuejs",
+    },
+  ]);
   const [proyects] = useState([
     {
       title: "Aplicacion de descarga de musica y video",
