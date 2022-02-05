@@ -5,3 +5,12 @@
 body {
   background-image: url("/bg_web2.webp");
 }
+
+body::-webkit-scrollbar-thumb {
+  background-color: blueviolet;
+  border-radius: 0.5rem;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
