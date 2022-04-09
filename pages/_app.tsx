@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="grid" style={{ gridTemplateColumns: "auto 1fr" }}>
       <SideBar />
-      <div className="bg-gray-100 p-2">
+      <div className="main bg-gray-100 p-2 h-screen overflow-auto">
         <Component {...pageProps} />
       </div>
     </div>

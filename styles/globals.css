@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body::-webkit-scrollbar-thumb {
+.main::-webkit-scrollbar-thumb {
   background-color: blueviolet;
   border-radius: 0.5rem;
 }
 
-body::-webkit-scrollbar {
+.main::-webkit-scrollbar {
   width: 0.5rem;
 }
 
