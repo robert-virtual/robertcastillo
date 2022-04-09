@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .main::-webkit-scrollbar-thumb {
-  background-color: blueviolet;
+  background-color: rgb(16 185 129);
   border-radius: 0.5rem;
 }
 
