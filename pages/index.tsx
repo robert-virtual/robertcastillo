@@ -32,9 +32,11 @@ const Page: NextPage<Props> = ({ characters, pages }) => {
   return (
     <>
       <Head>
-        <title>Vuejs</title>
+        <title>Robert castillo - Next js</title>
       </Head>
-      <h1>Vuejs</h1>
+      <h1 className="text-6xl text-emerald-400  text-center shadow">
+        Bienvenido
+      </h1>
       <div
         className="grid "
         style={{ gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))" }}
