@@ -3,7 +3,7 @@ const NextPage = () => {
   return (
     <>
       <Head>
-        <title>Next js</title>
+        <title>Robert Castillo - Next js</title>
       </Head>
       <div>
         <h1>Next js</h1>

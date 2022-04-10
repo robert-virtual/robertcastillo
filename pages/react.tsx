@@ -4,7 +4,7 @@ const ReactPage = ({}) => {
   return (
     <>
       <Head>
-        <title>react</title>
+        <title>Robert Castillo - react</title>
       </Head>
       <h1>react</h1>
     </>

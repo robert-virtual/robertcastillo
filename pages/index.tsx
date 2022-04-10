@@ -18,12 +18,20 @@ const Page: NextPage<Props> = ({ characters, pages }) => {
   const router = useRouter();
 
   const [page, setPage] = useState(Number(router.query.page) || 1);
-  function next(n: number) {
+  function nextUp(n: number) {
     return () => {
-      if (n < 0) {
+      if (n < 0 && page + n > 0) {
         router.back();
       } else {
         router.push(`?page=${page + n}`);
+      }
+      if (page + n >= pages) {
+        setPage(1);
+        return;
+      }
+      if (page + n <= 0) {
+        setPage(pages - 1);
+        return;
       }
       setPage(page + n);
     };
@@ -49,7 +57,7 @@ const Page: NextPage<Props> = ({ characters, pages }) => {
         ))}
       </div>
       <div className="flex justify-end items-center gap-x-2">
-        <button className="link" onClick={next(-1)}>
+        <button className="link" onClick={nextUp(-1)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -69,7 +77,7 @@ const Page: NextPage<Props> = ({ characters, pages }) => {
         <p>
           {page}/{pages}
         </p>
-        <button className="link" onClick={next(1)}>
+        <button className="link" onClick={nextUp(1)}>
           <span>siguiente</span>
 
           <svg
