@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default () => {
+const NodejsPage = () => {
   return (
     <>
       <Head>
@@ -12,3 +12,4 @@ export default () => {
     </>
   );
 };
+export default NodejsPage;

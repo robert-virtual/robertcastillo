@@ -33,7 +33,7 @@ export const SideBar: FC<Props> = ({}) => {
               />
             </svg>
           </button>
-          <Link href={"/"}>
+          <Link href={"/"} passHref>
             <div className="link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ export const SideBar: FC<Props> = ({}) => {
               <span className="link-text">Roberto Castillo</span>
             </div>
           </Link>
-          <Link href={"/aboutme"}>
+          <Link href={"/aboutme"} passHref>
             <div className="link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ export const SideBar: FC<Props> = ({}) => {
               <span className="link-text">Me</span>
             </div>
           </Link>
-          <Link href={"/nodejs"}>
+          <Link href={"/nodejs"} passHref>
             <div className="link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ export const SideBar: FC<Props> = ({}) => {
               <span className="link-text">Nodejs</span>
             </div>
           </Link>
-          <Link href={"/react"}>
+          <Link href={"/react"} passHref>
             <div className="link">
               <svg
                 className="h-6 w-6"
@@ -113,7 +113,7 @@ export const SideBar: FC<Props> = ({}) => {
               <span className="link-text">React js</span>
             </div>
           </Link>
-          <Link href={"/vuejs"}>
+          <Link href={"/vuejs"} passHref>
             <div className="link">
               <svg
                 className="h-6 w-6"
@@ -128,7 +128,7 @@ export const SideBar: FC<Props> = ({}) => {
               <span className="link-text">Vue js</span>
             </div>
           </Link>
-          <Link href={"/nextjs"}>
+          <Link href={"/nextjs"} passHref>
             <div className={"link"}>
               <svg
                 className="h-6 w-6"

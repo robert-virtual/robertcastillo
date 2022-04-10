@@ -1,5 +1,5 @@
 import Head from "next/head";
-export default () => {
+const NextPage = () => {
   return (
     <>
       <Head>
@@ -11,3 +11,4 @@ export default () => {
     </>
   );
 };
+export default NextPage;

@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default ({}) => {
+const ReactPage = ({}) => {
   return (
     <>
       <Head>
@@ -10,3 +10,4 @@ export default ({}) => {
     </>
   );
 };
+export default ReactPage;

@@ -44,7 +44,7 @@ const Page: NextPage<Props> = ({ characters, pages }) => {
         {characters.map(({ id, name, image }) => (
           <div key={id.toString()}>
             <h3>{name}</h3>
-            <Image src={image} width={200} height={200} />
+            <Image src={image} width={200} height={200} alt={name} />
           </div>
         ))}
       </div>
